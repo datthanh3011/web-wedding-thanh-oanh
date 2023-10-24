@@ -1,0 +1,911 @@
+body{
+    padding:0px;
+    margin:0px;
+  }
+  #loading-page{
+    overflow: hidden;
+  }
+  #modal-load{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+  }
+  .icon-load{
+    width: 18vw;
+    height: 18vw;
+    border-top: 0.7vw solid rgba(114, 21, 31,1);
+    border-bottom: 0vw solid white;
+    border-left: 0.6vw solid rgba(114, 21, 31,1);
+    border-right: 0.7vw solid white;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .rolating{
+    -webkit-animation: rolate 1s linear infinite;
+    -moz-animation: rolate 1s linear infinite;
+    -ms-animation: rolate 1s linear infinite;
+    -o-animation: rolate 1s linear infinite;
+    animation: rolate 1s linear infinite;
+  }
+  @-webkit-keyframes {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rolate{
+     from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  #home{
+    width:100%;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+  }
+  #image-home{
+    width: 100%;
+    height:100%;
+    position: relative;
+  }
+  #image-home > img{
+    width: 100%
+  }
+  #class-image-blur{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top:0;
+    left:0
+  }
+  #container-text-home{
+    height:100%;
+    width:100%;
+    position: absolute;
+    z-index: 2;
+    top:0;
+    left:0;
+  }
+  #text-home{
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #area-text-name{
+    color: white;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  #area-text-name > h2{
+    font-family: 'Alex Brush', cursive;
+    font-weight: 500;
+    font-size: 6vw;
+    opacity: 0;
+    position: relative;
+  }
+  @keyframes slideUp{
+    from{
+      top: 90px;
+      opacity: 0;
+    }
+    to{
+      top: 0px;
+      opacity:1;
+    }
+  }
+  #area-text-name > h4{
+    font-weight: 400;
+    font-size: 3vw;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 10px 25px;
+    margin-top: 10px;
+    opacity: 0;
+    font-family: 'Asap', sans-serif;
+    
+  }
+  #area-text-name > h4> span{opacity:0}
+  @keyframes fadeinup{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity:1;
+    }
+  }
+  #text-save-date{
+    position: relative;
+    left: 0;
+    bottom: -100px;
+    opacity: 0;
+    color:white;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -15%;
+  }
+  @keyframes slupUpCicle{
+    from{
+      bottom: -100px;
+      opacity: 0
+    }
+    to{
+      bottom: 0px;
+      opacity: 1
+    }
+  }
+
+  #cicle-save-the-date{
+    border: 0px solid;
+    border-radius: 100%;
+    animation: zoomCicle ease-in-out .5s infinite alternate-reverse ;
+    background-color: rgba(114, 21, 31,.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+  }
+
+  @keyframes zoomCicle{
+    from{
+      width: 50vw;
+      height:50vw;
+      top: -2vw;
+    }
+    to{
+      width: 48vw;
+      height:48vw;
+      top: 0vw;
+    }
+  }
+  #cicle-save-the-date-1{
+    border: 0px solid;
+    width: 46vw;
+    height: 46vw;
+    border-radius: 100%;
+    background-color: rgba(114, 21, 31, .6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    position: absolute;
+    
+  }
+  .save-date{
+    font-weight: 500;
+    font-size: 4vw;
+    font-family: 'Alex Brush', cursive;
+    word-spacing: 2px;
+    margin:5% 0px 0px 0px;
+  }
+  .date{
+    margin: 0px 0px 2% 0px;
+    font-family: 'Asap', sans-serif;
+    font-size: 2vw;
+  }
+  
+  
+  @media(max-width:1024px){
+    #about-chure{
+      max-width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba(114, 21, 31, .05);
+      text-align: center;
+      align-items: center;
+    }
+    #container-about-codau-chure{
+      width: 100%;
+      margin: 40px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #about-codau{
+      max-width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba(114, 21, 31, .05);
+      text-align: center;
+      align-items: center;
+      margin-top: 20px
+    }
+    .hinh-anh{
+      width: 100%;
+      overflow: hidden;
+    }
+    .hinh-anh > img{
+      width: 100%;
+      position: relative;
+      left: -50px;
+      opacity: 0;
+    }
+    @keyframes slideUpImgCoDauChuRe{
+      from{
+        left: -50px;
+        opacity: 0
+      }
+      to{
+        left: 0px;
+        opacity: 1
+      }
+    } 
+    .thong-tin{
+      padding: 50px
+    }
+    .chure-codau{
+      font-weight: 600;
+      font-size: 15px;
+      font-family: 'Varela Round', sans-serif;
+      word-spacing: 2px;
+    }
+    .name{
+      font-weight: 500;
+      font-size: 25px;
+      font-family: 'Alex Brush', cursive;
+    }
+    .group-social-btn >button{
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      border: 0px;
+      background-color:rgba(114, 21, 31, .9);
+      color: white;
+      font-size: 10px;
+    }
+    .group-social-btn >button:hover{
+      background-color:rgba(114, 21, 31, 1);
+    }
+
+    
+    #carousel-img{
+      max-height: 150px;
+      overflow: hidden;
+      position:relative;
+    }
+    .carousel-item{
+      transition: transform .6s ease-in-out;
+    }
+    #countdown{
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      left: 0;
+    }
+    #waitfor{
+      width: 100%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Alex Brush', cursive;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    #waitfor span:first-child {
+      font-size: 3vw
+    }
+    #waitfor span:nth-child(2){
+      font-size: 7vw
+    }
+    #countdown-numberdate{
+      width: 100%;
+      color: rgba(114, 21, 31, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 1px 1px 2px rgba(114, 21, 31, .3);
+    }
+    #countdown-numberdate > div > div{
+      border: 1px solid white;
+      font-size: 5vw;
+      border-radius: 5px;
+      padding: 1vw 2vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+    #countdown-numberdate > div {
+      border: 0px solid red;
+      border-radius: 5px;
+      background-color: rgba(114, 21, 31, .5);
+      margin: .5vw;
+      padding: .5vw
+    }
+    #countdown-numberdate > div >div > span{
+      font-size: 1.5vw
+    }
+    #content-countdown{
+      padding: 5vw 7vw;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center
+    }
+
+    #thongtin-cuhanh-honle{
+      width: 100%;
+      margin: 100px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content:center;
+    }
+    #icon-dove i{
+      font-size: 20px;
+      color:rgba(114, 21, 31, .8);
+    }
+    .section-title{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 1px 1px 2px rgba(114, 21, 31, .3);
+    }
+    .section-title h2{
+      padding: 12px 20px;
+      border-top: 3px solid rgba(114, 21, 31, .5);
+      border-bottom: 3px solid rgba(114, 21, 31, .5);
+      font-family: 'Alex Brush', cursive;
+      font-weight: 600;
+      font-size: 30px;
+      margin-top: 25px;
+      background-color: rgba(114, 21, 31, .05);
+      color: #504e4e;
+    }
+    #line-icon-dove:before{
+      content: '';
+      width: 25px;
+      height: 2px;
+      background-color: rgba(114, 21, 31, .5);
+      position: absolute;
+      top: 18px;
+      left: 95px;
+    }
+    #line-icon-dove:after{
+      content: '';
+      width: 2px;
+      height: 30px;
+      background-color: rgba(114, 21, 31, .5);
+      position: absolute;
+      top: 19px;
+      left: 107px;
+    }
+
+    #container-info-wedding{
+      width: 80%
+    }
+    .row-info{
+      margin: 60px 0px;
+      width: 100%;
+      display: flex;
+      flex-direction: column
+    }
+    .img-desp{
+      width: 50%
+    }
+    .img-desp img{
+      width: 100%
+    }
+    .content-info-wedding{
+      margin-top: 30px;
+      width: 100%;
+      font-family: 'Asap', sans-serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .name-info{
+      font-size: 17px;
+      font-weight: 500;
+      margin: 0px 0px 10px 0px;
+
+    }
+    .address-wedding{
+      margin-bottom: 5px;
+      color: #8f8d8d;
+      font-size: 13px;
+    }
+    .address-wedding i{
+      color: rgba(114, 21, 31, 1);
+      margin: 0px 10px 0px 0px;
+    }
+    .time-wedding{
+      color: #8f8d8d;
+      font-size: 13px;
+    }
+    .time-wedding i{
+      color: rgba(114, 21, 31, 1);
+      margin: 0px 10px 0px 0px;
+    }
+    .mota-wedding{
+      margin: 15px 0px;
+      font-size: 13px;
+    }
+    .show-map a{
+      text-decoration: none;
+      background-color: rgba(114, 21, 31, .9);
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      border: 0px solid;
+      padding: 10px 20px;
+    }
+    .show-map a:hover{
+      background-color: rgba(114, 21, 31, 1);
+      font-weight: 600;
+    }
+    .mota-wedding{
+      color:#484848;
+    }
+    #footer{
+      width: 100%;
+      position: relative
+    }
+    #footer-child{
+      width:100%;
+      height: 50vw;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #img-footer{
+      width: 100%;
+      position: absolute
+    }
+    #img-footer img{
+      width: 100%
+    }
+    #text-footer{
+      width: 100%;
+      height: 50vw;
+      background-color: rgba(0, 0, 0,.8);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+      text-shadow: 1px 1px 2px rgba(114, 21, 31, .3);
+    }
+    #text-footer span{
+      color: white;
+      font-family: 'Alex Brush', cursive;
+      font-size: 7vw;
+    }
+    #icon-arrow{
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: -13%;
+      left: 45%;
+    }
+    #icon-arrow a{
+      font-size: 6vw;
+      color: rgba(114, 21, 31, 1);
+      width: 13vw;
+      height: 13vw;
+      background-color: white;
+      border-radius: 100px;
+      border: 0px;
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+    }
+    #icon-arrow a i{
+      display: flex;
+      align-items: center;
+    }
+    #icon-arrow a i:before{
+      content:'\f102';
+      position: absolute;
+      margin-top: 5px;
+      animation: giamOpacity ease-in-out .5s infinite alternate-reverse;
+    }
+    #icon-arrow a i:after{
+      content:'\f102';
+      animation: tangOpacity ease-in-out .5s infinite alternate-reverse;
+    }
+    @keyframes giamOpacity{
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+    @keyframes tangOpacity{
+      from{
+        opacity: 1;
+      }
+      to{
+        opacity: 0;
+      }
+    }
+
+  }
+  @media(min-width:1025px){
+    #area-text-name{
+      color: white;
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+      margin-top: -13vw;
+    }
+      #container-about-codau-chure{
+      width: 100%;
+      margin: 120px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    #about-chure{
+      width: 850px;
+      display: flex;
+      justify-content: center;
+      background-color: rgba(114, 21, 31, .05);
+    }
+    #about-codau{
+      width: 850px;
+      display: flex;
+      justify-content: center;
+      background-color: rgba(114, 21, 31, .05);
+    }
+    #about-codau > .thong-tin{
+      text-align: right;
+    }
+    .hinh-anh{
+      width: 425px;
+      overflow: hidden;
+    }
+    .hinh-anh > img{
+      width: 100%;
+      position: relative;
+      left: -50px;
+      opacity: 0;
+    }
+    @keyframes slideUpImgCoDauChuRe{
+      from{
+        left: -50px;
+        opacity: 0
+      }
+      to{
+        left: 0px;
+        opacity: 1
+      }
+    } 
+    .thong-tin{
+      width:425px;
+      padding: 50px
+    }
+    .chure-codau{
+      font-weight: 500;
+      font-size: 30px;
+      font-family: 'Varela Round', sans-serif;
+      word-spacing: 2px;
+    }
+    .name{
+      font-weight: 500;
+      font-size: 35px;
+      font-family: 'Alex Brush', cursive;
+    }
+    .group-social-btn >button{
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      border: 0px;
+      background-color:rgba(114, 21, 31, .9);
+      color: white;
+    }
+    .group-social-btn >button:hover{
+      background-color:rgba(114, 21, 31, 1);
+
+    }
+
+    #carousel-img{
+      max-height: 350px;
+      overflow: hidden;
+      position:relative;
+      transition: opacity .3s ease-in-out;
+    }
+    .carousel-item{
+      transition: transform .6s ease-in-out;
+    }
+    #countdown{
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      left: 0;
+    }
+    #waitfor{
+      width: 100%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Alex Brush', cursive;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    #waitfor span:first-child {
+      font-size: 2vw
+    }
+    #waitfor span:nth-child(2){
+      font-size: 5vw
+    }
+    #countdown-numberdate{
+      width: 100%;
+      color: rgba(114, 21, 31, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 1px 1px 2px rgba(114, 21, 31, .3);
+    }
+    #countdown-numberdate > div > div{
+      border: 1px solid white;
+      font-size: 3vw;
+      border-radius: 5px;
+      padding: 1vw 2vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+    #countdown-numberdate > div {
+      border: 0px solid red;
+      border-radius: 5px;
+      background-color: rgba(114, 21, 31, .5);
+      margin: .5vw;
+      padding: .5vw
+    }
+    #countdown-numberdate > div >div > span{
+      font-size: 1vw
+    }
+    #content-countdown{
+      padding: 5vw 7vw;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center
+    }
+
+    #thongtin-cuhanh-honle{
+      width: 100%;
+      margin: 100px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content:center;
+    }
+    #icon-dove i{
+      font-size: 30px;
+      color:rgba(114, 21, 31, .8);
+    }
+    .section-title{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 1px 1px 2px rgba(114, 21, 31, .3);
+    }
+    .section-title h2{
+      padding: 12px 20px;
+      border-top: 3px solid rgba(114, 21, 31, .5);
+      border-bottom: 3px solid rgba(114, 21, 31, .5);
+      font-family: 'Alex Brush', cursive;
+      font-weight: 600;
+      font-size: 50px;
+      margin-top: 25px;
+      background-color: rgba(114, 21, 31, .05);
+      color: #504e4e;
+    }
+    #line-icon-dove:before{
+      content: '';
+      width: 30px;
+      height: 2px;
+      background-color: rgba(114, 21, 31, .5);
+      position: absolute;
+      top: 26px;
+      left: 151px;
+    }
+    #line-icon-dove:after{
+      content: '';
+      width: 2px;
+      height: 30px;
+      background-color: rgba(114, 21, 31, .5);
+      position: absolute;
+      top: 27px;
+      left: 165px;
+    }
+
+    #container-info-wedding{
+      width: 80%
+    }
+    .row-info{
+      margin: 30px 0px;
+      width: 100%;
+      display: flex;
+    }
+    .img-desp{
+      width: 40%
+    }
+    .img-desp img{
+      width: 100%
+    }
+    .content-info-wedding{
+      width: 60%;
+      padding-left: 50px;
+      font-family: 'Asap', sans-serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .name-info{
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0px 0px 10px 0px;
+
+    }
+    .address-wedding{
+      margin-bottom: 5px;
+      color: #8f8d8d;
+    }
+    .address-wedding i{
+      color: rgba(114, 21, 31, 1);
+      margin: 0px 10px 0px 0px;
+    }
+    .time-wedding{
+      color: #8f8d8d;
+    }
+    .time-wedding i{
+      color: rgba(114, 21, 31, 1);
+      margin: 0px 10px 0px 0px;
+    }
+    .mota-wedding{
+      margin: 15px 0px;
+    }
+    .show-map a{
+      text-decoration: none;
+      background-color: rgba(114, 21, 31, .9);
+      color: white;
+      font-weight: 600;
+      font-size: 19px;
+      border: 0px solid;
+      padding: 10px 20px;
+    }
+    .show-map a:hover{
+      background-color: rgba(114, 21, 31, 1);
+      font-weight: 600;
+    }
+    .mota-wedding{
+      color:#484848;
+    }
+    #footer{
+      width: 100%;
+      position: relative
+    }
+    #footer-child{
+      width:100%;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    #img-footer{
+      width: 100%;
+      position: absolute
+    }
+    #img-footer img{
+      width: 100%
+    }
+    #text-footer{
+      width: 100%;
+      height: 300px;
+      background-color: rgba(0, 0, 0,.8);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+      text-shadow: 1px 1px 2px rgba(114, 21, 31, .3);
+    }
+    #text-footer span{
+      color: white;
+      font-family: 'Alex Brush', cursive;
+      font-size: 60px;
+    }
+    #icon-arrow{
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: -13%;
+      left: 45%;
+    }
+    #icon-arrow a{
+      font-size: 30px;
+      color: rgba(114, 21, 31, 1);
+      width: 70px;
+      height: 70px;
+      background-color: white;
+      border-radius: 100px;
+      border: 0px;
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+    }
+    #icon-arrow a i{
+      display: flex;
+      align-items: center;
+    }
+    #icon-arrow a i:before{
+      content:'\f102';
+      position: absolute;
+      margin-top: 5px;
+      animation: giamOpacity ease-in-out .5s infinite alternate-reverse;
+    }
+    #icon-arrow a i:after{
+      content:'\f102';
+      animation: tangOpacity ease-in-out .5s infinite alternate-reverse;
+    }
+    @keyframes giamOpacity{
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+    @keyframes tangOpacity{
+      from{
+        opacity: 1;
+      }
+      to{
+        opacity: 0;
+      }
+    }
+  }
