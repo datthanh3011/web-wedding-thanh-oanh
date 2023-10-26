@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
-<body id="loading-page">
+<body id="loading-page" class="overflow-hide">
+    <div id="containerHeart" >
+    </div>
+    <div id="modal-thu-ngo" style="display: flex; justify-content: center;align-items: center;width: 100%;height: 100%;position: absolute;  ">
+      <div class="container-thungo">
+        <div class="section-title" style="margin-bottom: 30px;" >
+          <div id="line-icon-dove" class="thu-ngo">
+            <div id="icon-dove" >
+              <i class="fas fa-dove"></i>
+              <i class="fas fa-dove" style="transform: scaleX(-1);"></i>
+            </div>
+          </div>
+          <h2>
+            Thư Ngỏ
+          </h2>
+        </div>
+        <div>
+          <p>Thật vui vì được gặp và đón tiếp quý khách trong một dịp đặc biệt như đám cưới của chúng tôi. Chúng tôi muốn gửi đến quý khách những lời cảm ơn sâu sắc nhất và để quý khách biết chúng tôi rất hạnh phúc khi thấy quý khách ở đó. Cảm ơn quý khách rất nhiều vì sự hiện diện cùng những lời chúc tốt đẹp mà quý khách đã dành cho chúng tôi!</p>
+        </div>
+        <div style="font-size: 30px;font-family: 'Alex Brush'; margin-bottom: 20px;">Nhấn vào đây để xem tiếp nhé!!!</div>
+        <button id="start-btn">
+          <p style="height: 100px;width: 100px;margin: 0px;display: flex;justify-content: center;align-items: center; border-radius: 100px;">Bắt Đầu</p>
+        </button>
+      </div>
+      <div class="backgroud-thungo">
+        
+      </div>
+    </div>
+    
     <div id="modal-load">
       <div class="icon-load rolating">
         
@@ -60,6 +88,17 @@
         
       </div>
       <div id="container-about-codau-chure">
+        <div class="section-title" style="margin-bottom: 30px;" >
+          <div id="line-icon-dove" class="about-us">
+            <div id="icon-dove" >
+              <i class="fas fa-dove"></i>
+              <i class="fas fa-dove" style="transform: scaleX(-1);"></i>
+            </div>
+          </div>
+          <h2>
+            About Us
+          </h2>
+        </div>
         <div id="about-chure" class="active">
           <div class="hinh-anh">
             <img src="img/hinh-anh-chu-re.jpg"/>
@@ -76,6 +115,9 @@
                 <i class="fab fa-facebook-f"></i>
               </button>
             </div>
+            <div class="noidunggioithieu" style="margin-top: 10px;">
+              <p>Chàng trai sinh ra và lớn lên tại mảnh đất Bảo Lộc thân yêu. Sau khi tốt nghiệp chuyên ngành công nghệ thông tin, hiện tại anh đang làm việc tại Bảo Lộc. Là một người hiền lành, luôn coi trọng tình cảm và yêu thương gia đình. Với anh: “Gia đình là điểm tựa vững chắc nhất và là bến đỗ bình yên không đâu sánh bằng đối với mỗi con người. Đó luôn là nơi tràn ngập tình yêu thương để ta trở về.”</p>
+            </div>
           </div>
         </div>
         <div id="about-codau" class="active">
@@ -90,6 +132,9 @@
               <button id="fb-codau">
                 <i class="fab fa-facebook-f"></i>
               </button>
+            </div>
+            <div class="noidunggioithieu" style="margin-top: 10px;">
+              <p>Cô gái đến từ quê hương Nam Định xinh đẹp, hiện đang sống và làm việc tại Bảo Lộc . Với cô: "Hãy lấp đầy một ngôi nhà bằng tình yêu, nó sẽ trở thành gia đình" Là cô gái dịu dàng, xinh đẹp, và thương chồng.</p>
             </div>
           </div>
           <div class="hinh-anh">
@@ -156,7 +201,7 @@
               <div>
                 <div>
                   <div id="number-seconds">
-                    
+
                   </div>
                   <span>
                     SECS
@@ -186,7 +231,7 @@
             </div>
             <div class="content-info-wedding">
               <div class="name-info">
-                <b>CỬ HÀNH HÔN LỄ</b>
+                <b>CỬ HÀNH HÔN LỄ NHÀ TRAI</b>
               </div>
               <div class="address-wedding">
                 <i class="fas fa-map-marker-alt"></i>
@@ -197,7 +242,7 @@
               <div class="time-wedding">
                 <i class="far fa-clock"></i>
                 <span>
-                  9h - 10h30, 28/11/2017
+                  10h - 10h30, 21/11/2023
                 </span>
               </div>
               <div class="mota-wedding">
@@ -216,7 +261,7 @@
             </div>
             <div class="content-info-wedding">
               <div class="name-info">
-                <b>TỔ CHỨC TIỆC CƯỚI</b>
+                <b>TỔ CHỨC TIỆC CƯỚI NHÀ TRAI</b>
               </div>
               <div class="address-wedding">
                 <i class="fas fa-map-marker-alt"></i>
@@ -227,7 +272,7 @@
               <div class="time-wedding">
                 <i class="far fa-clock"></i>
                 <span>
-                  9h - 10h30, 28/11/2017
+                  17h30, 21/11/2023
                 </span>
               </div>
               <div class="mota-wedding">
@@ -237,6 +282,66 @@
               </div>
               <div class="show-map">
                 <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/tzUfm75UxUnNztY18"> Xem Vị Trí Map </a>
+              </div>
+            </div>
+          </div>
+          <div class="row-info">
+            <div class="img-desp">
+              <img src="img/Deonhancuoidungcach.jpg"/>
+            </div>
+            <div class="content-info-wedding">
+              <div class="name-info">
+                <b>CỬ HÀNH HÔN LỄ NHÀ GÁI</b>
+              </div>
+              <div class="address-wedding">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>
+                  Thôn 2 - Hòa Bắc Huyện Di Linh - Lâm Đồng
+                </span>
+              </div>
+              <div class="time-wedding">
+                <i class="far fa-clock"></i>
+                <span>
+                  9h30 - 10h00, 20/11/2023
+                </span>
+              </div>
+              <div class="mota-wedding">
+                <span>
+                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </span>
+              </div>
+              <div class="show-map">
+                <a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/3DELiiK6vChmKub57"> Xem Vị Trí Map </a>
+              </div>
+            </div>
+          </div>
+          <div class="row-info">
+            <div class="img-desp">
+              <img src="img/3381506e19cc62e2f30420945e0d2913.jpg"/>
+            </div>
+            <div class="content-info-wedding">
+              <div class="name-info">
+                <b>TỔ CHỨC TIỆC CƯỚI NHÀ GÁI</b>
+              </div>
+              <div class="address-wedding">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>
+                  Thôn 2 - Hòa Bắc Huyện Di Linh - Lâm Đồng
+                </span>
+              </div>
+              <div class="time-wedding">
+                <i class="far fa-clock"></i>
+                <span>
+                  11h, 20/11/2023
+                </span>
+              </div>
+              <div class="mota-wedding">
+                <span>
+                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </span>
+              </div>
+              <div class="show-map">
+                <a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/3DELiiK6vChmKub57"> Xem Vị Trí Map </a>
               </div>
             </div>
           </div>
@@ -259,6 +364,11 @@
           </a>
         </div>
       </div>
+    </div>
+    <div id="playmusic">
+      <audio controls   autoplay="true" hidden  id="music">
+        <source src="./audio/emdongy-yesido.mp3" type="audio/mpeg">
+      </audio>
     </div>
     <script src="scripts.js"></script>
   </body>

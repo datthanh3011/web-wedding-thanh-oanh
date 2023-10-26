@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    
     var linkFbCoDau = 'https://www.facebook.com/people/Oanh-Panda/pfbid031jWYgfXFjV5G22DUQtMZSGWMp2G8M1EK791JEtpBteVhh9d6weppaEufBeTsbx5hl/?mibextid=ZbWKwL'
     var linkFbChuRe = 'https://www.fb.com/thanh.ton.545'
 
@@ -24,9 +23,22 @@ $(document).ready(function(){
         $("#number-seconds").html(0)
       }
     },1000);
-
     
-
+    function monhac(){
+      $("#music")[0].play();
+    }
+    function closethungo(){
+      $("#modal-thu-ngo").addClass("visibility-hidden");
+      $("body").removeClass("overflow-hide")
+    }
+    $("#start-btn").click(function(){
+      monhac();
+      closethungo();
+    })
+    $(".backgroud-thungo").click(function(){
+      monhac();
+      closethungo();
+    })
     $('#fb-chure').click(function(){
       var openPage = window.open(linkFbChuRe, '_blank')
       openPage.focus();
@@ -106,4 +118,29 @@ $(document).ready(function(){
     $('#icon-arrow').click(function(){
       $('html , body').animate({scrollTop: $("#home").offset().top},0);
     })
+
+    let containerHeart = $("#containerHeart")
+    let body = $("body")
+    let count = 50
+    let height = screen.height
+    console.log('chieu dai man hinh' + height)
+    for (let x = 0; x < 50; x++) {
+      let leftHeart = Math.floor(Math.random() * containerHeart.innerWidth() ) 
+      if (leftHeart > 60) {
+        leftHeart = leftHeart - 60
+      }
+      let topHeart = Math.floor(Math.random() * body.innerHeight() - height )
+      let widthHeart = Math.floor(Math.random() * 30)
+      let div = document.createElement("div")
+      let timeHeart = Math.floor(Math.random() * 5 + 5)
+      let blurHeart = Math.floor(Math.random() * 5)
+      div.classList.add("heart")
+      div.style.left = leftHeart + 'px'
+      div.style.top = topHeart + 'px'
+      div.style.width = widthHeart + 'px'
+      div.style.height = widthHeart + 'px' 
+      div.style.animationDuration = timeHeart + 's'
+      div.style.filter = "blur(" + blurHeart + 'px)'
+      containerHeart.append(div)
+    }
 })

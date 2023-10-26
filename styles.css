@@ -2,6 +2,45 @@ body{
     padding:0px;
     margin:0px;
   }
+  
+  .heart{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url(./img/love_heart.png);
+    background-size: cover;
+    z-index: 99999;
+    animation: animationHeart 4s ease-in-out infinite;
+  }
+  @keyframes animationHeart{
+    0%{
+      transform: translate(0, 0);
+      opacity: 0%;
+    }
+    50%{
+      opacity: 100%;
+    }
+    90%{
+      opacity: 100%;
+    }
+    100%{
+      transform: translate(0, 100vh);
+      opacity: 0%;
+    }
+  }
+  #start-btn{
+    border-radius: 100px;
+    border: none;
+    background-color: rgb(134, 5, 18);
+    color: white;
+    font-size: 23px;
+    font-family: 'Alex Brush', cursive;
+  }
+  .overflow-hide{
+    overflow: hidden;
+  }
   #loading-page{
     overflow: hidden;
   }
@@ -62,6 +101,36 @@ body{
       -o-transform: rotate(360deg);
       transform: rotate(360deg);
     }
+  }
+
+  .backgroud-thungo{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);;
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-thungo{
+    height: 75%;
+    width: 75%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 9;
+    padding: 30px 35px;
+    overflow: scroll;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+  }
+  .visibility-hidden{
+    visibility:hidden
   }
   #home{
     width:100%;
@@ -402,6 +471,18 @@ body{
       position: absolute;
       top: 18px;
       left: 95px;
+    }
+    .about-us:before{
+      left: 64px !important;
+    }
+    .about-us:after{
+      left: 75px !important;
+    }
+    .thu-ngo:before{
+      left: 56px !important;
+    }
+    .thu-ngo:after{
+      left: 68px !important;
     }
     #line-icon-dove:after{
       content: '';
@@ -761,6 +842,18 @@ body{
       position: absolute;
       top: 27px;
       left: 165px;
+    }
+    .about-us:before{
+      left: 99px !important;
+    }
+    .about-us:after{
+      left: 112px !important;
+    }
+    .thu-ngo:before{
+      left: 86px !important;
+    }
+    .thu-ngo:after{
+      left: 100px !important;
     }
 
     #container-info-wedding{
