@@ -148,6 +148,49 @@ $(document).ready(function(){
     let containerGallery = $('#container-gallery')
     var  column = []
     var arrayImages=['./img/album/1a.jpg','./img/album/1b.jpg','./img/album/2a.jpg','./img/album/4a.jpg','./img/album/6b.jpg','./img/album/8b.jpg','./img/album/9a.jpg','./img/album/10b.jpg' ]
+    var detailImages = [
+      {
+        src : './img/album/1a.jpg',
+        widthOrigin: '2929',
+        heightOrigin: '1940',
+      },
+      {
+        src : './img/album/1b.jpg',
+        widthOrigin: '2334',
+        heightOrigin: '3682',
+      },
+      {
+        src : './img/album/2a.jpg',
+        widthOrigin: '2953',
+        heightOrigin: '4134',
+      },
+      {
+        src : './img/album/4a.jpg',
+        widthOrigin: '2935',
+        heightOrigin: '4134',
+      },
+      {
+        src : './img/album/6b.jpg',
+        widthOrigin: '2932',
+        heightOrigin: '4134',
+      },
+      {
+        src : './img/album/8b.jpg',
+        widthOrigin: '1268',
+        heightOrigin: '2030',
+      },
+      {
+        src : './img/album/9a.jpg',
+        widthOrigin: '2941',
+        heightOrigin: '4134',
+      },
+      {
+        src : './img/album/10b.jpg',
+        widthOrigin: '2935',
+        heightOrigin: '2024',
+      },
+    ]
+    
     if (containerGallery.innerWidth()> 915) {
       let number = 3
       for (let x = 0; x < number; x++) {
@@ -156,15 +199,16 @@ $(document).ready(function(){
       }
       
     }
-    console.log(column[0])
-    console.log(detailImages)
-    arrayImages.forEach(function(value, key,array){
-      $("<img/>").attr('src', value)
-      .on('load', function() {
-          detailImages[key] = {widthOrgin: `${this.width}` , heightOrgin: `${this.height}`, src: value}
-          console.log(detailImages[key])
+    for (let x = 0; x < detailImages.length; x = x + column.length) {
+      let i = x
+      column.forEach(left => {
+        detailImages[i].push({left: left})
+        i = i+1
       });
-    })
+    }
+    console.log(detailImages)
+    
+    
     
     //for (let x = 0; x < arrayImages.length; x+3) {
     //  var temp =x
@@ -174,7 +218,5 @@ $(document).ready(function(){
     //    temp = temp+1
     //  });
     //}
-    console.log(detailImages)
-    $('#test').html('dttttt' + detailImages)
       
 })
