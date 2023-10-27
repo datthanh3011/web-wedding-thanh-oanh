@@ -143,4 +143,38 @@ $(document).ready(function(){
       div.style.filter = "blur(" + blurHeart + 'px)'
       containerHeart.append(div)
     }
+    
+    var detailImages =[]
+    let containerGallery = $('#container-gallery')
+    var  column = []
+    var arrayImages=['./img/album/1a.jpg','./img/album/1b.jpg','./img/album/2a.jpg','./img/album/4a.jpg','./img/album/6b.jpg','./img/album/8b.jpg','./img/album/9a.jpg','./img/album/10b.jpg' ]
+    if (containerGallery.innerWidth()> 915) {
+      let number = 3
+      for (let x = 0; x < number; x++) {
+        //column.push(containerGallery.innerWidth()/number*x)
+        column.push(100/number*x)
+      }
+      
+    }
+    console.log(column[0])
+    console.log(detailImages)
+    arrayImages.forEach(function(value, key,array){
+      $("<img/>").attr('src', value)
+      .on('load', function() {
+          detailImages[key] = {widthOrgin: `${this.width}` , heightOrgin: `${this.height}`, src: value}
+          console.log(detailImages[key])
+      });
+    })
+    
+    //for (let x = 0; x < arrayImages.length; x+3) {
+    //  var temp =x
+    //  column.forEach(left => {
+    //    var obj = {left : left +'%'}
+    //    arrayImages[0]
+    //    temp = temp+1
+    //  });
+    //}
+    console.log(detailImages)
+    $('#test').html('dttttt' + detailImages)
+      
 })

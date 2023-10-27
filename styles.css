@@ -484,6 +484,12 @@ body{
     .thu-ngo:after{
       left: 68px !important;
     }
+    .pre-wedding-album:before{
+      left: calc(50% - 12.5px) !important;
+    }
+    .pre-wedding-album:after{
+      left: calc(50% - 1px) !important;
+    }
     #line-icon-dove:after{
       content: '';
       width: 2px;
@@ -855,7 +861,12 @@ body{
     .thu-ngo:after{
       left: 100px !important;
     }
-
+    .pre-wedding-album:before{
+      left: calc(50% - 15px) !important;
+    }
+    .pre-wedding-album:after{
+      left: calc(50% - 1px) !important;
+    }
     #container-info-wedding{
       width: 80%
     }
