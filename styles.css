@@ -566,7 +566,8 @@ body{
     }
     #footer{
       width: 100%;
-      position: relative
+      position: relative;
+      margin-top: 50px;
     }
     #footer-child{
       width:100%;
@@ -929,7 +930,8 @@ body{
     }
     #footer{
       width: 100%;
-      position: relative
+      position: relative;
+      margin-top: 50px;
     }
     #footer-child{
       width:100%;
