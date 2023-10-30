@@ -119,29 +119,31 @@ $(document).ready(function(){
       $('html , body').animate({scrollTop: $("#home").offset().top},0);
     })
 
-    let containerHeart = $("#containerHeart")
-    let body = $("body")
-    let count = 50
-    let height = screen.height
-    console.log('chieu dai man hinh' + height)
-    for (let x = 0; x < 50; x++) {
-      let leftHeart = Math.floor(Math.random() * containerHeart.innerWidth() ) 
-      if (leftHeart > 60) {
-        leftHeart = leftHeart - 60
+    function addHeart(){
+      let containerHeart = $("#containerHeart")
+      let body = $("body")
+      let count = 50
+      let height = screen.height
+      console.log('chieu dai man hinh' + height)
+      for (let x = 0; x < 50; x++) {
+        let leftHeart = Math.floor(Math.random() * containerHeart.innerWidth() ) 
+        if (leftHeart > 60) {
+          leftHeart = leftHeart - 60
+        }
+        let topHeart = Math.floor(Math.random() * body.innerHeight() - height )
+        let widthHeart = Math.floor(Math.random() * 30)
+        let div = document.createElement("div")
+        let timeHeart = Math.floor(Math.random() * 5 + 5)
+        let blurHeart = Math.floor(Math.random() * 5)
+        div.classList.add("heart")
+        div.style.left = leftHeart + 'px'
+        div.style.top = topHeart + 'px'
+        div.style.width = widthHeart + 'px'
+        div.style.height = widthHeart + 'px' 
+        div.style.animationDuration = timeHeart + 's'
+        div.style.filter = "blur(" + blurHeart + 'px)'
+        containerHeart.append(div)
       }
-      let topHeart = Math.floor(Math.random() * body.innerHeight() - height )
-      let widthHeart = Math.floor(Math.random() * 30)
-      let div = document.createElement("div")
-      let timeHeart = Math.floor(Math.random() * 5 + 5)
-      let blurHeart = Math.floor(Math.random() * 5)
-      div.classList.add("heart")
-      div.style.left = leftHeart + 'px'
-      div.style.top = topHeart + 'px'
-      div.style.width = widthHeart + 'px'
-      div.style.height = widthHeart + 'px' 
-      div.style.animationDuration = timeHeart + 's'
-      div.style.filter = "blur(" + blurHeart + 'px)'
-      containerHeart.append(div)
     }
     
     var detailImages =[]
@@ -291,7 +293,10 @@ $(document).ready(function(){
         div.appendChild(img)
       }
     }
+    
     window.addEventListener('resize',addAlbum() , true);
+    window.addEventListener('resize',addHeart() , true);
+    
     //for (let x = 0; x < arrayImages.length; x+3) {
     //  var temp =x
     //  column.forEach(left => {
