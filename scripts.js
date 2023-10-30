@@ -149,7 +149,7 @@ $(document).ready(function(){
     var detailImages =[]
     let containerGallery = $('#container-gallery')
     var  column = []
-    //var arrayImages=['./img/album/1a.jpg','./img/album/1b.jpg','./img/album/2a.jpg','./img/album/4a.jpg','./img/album/6b.jpg','./img/album/8b.jpg','./img/album/9a.jpg','./img/album/10b.jpg' ]
+    
     var detailImages = [
       {
         src : './img/album/1a.jpg',
@@ -193,109 +193,19 @@ $(document).ready(function(){
       },
     ]
     
-    function addAlbum(){
-      console.log("chieu ngang man hinh: " + containerGallery.innerWidth())
-      var widthContainerAlbum = containerGallery.innerWidth()
-      if (containerGallery.innerWidth()> 915) {
-        let number = 3
-        for (let x = 0; x < number; x++) {
-          //column.push(containerGallery.innerWidth()/number*x)
-          column.push(100/number*x)
-        }
-
-      }else{
-        let number = 2
-        for (let x = 0; x < number; x++) {
-          //column.push(containerGallery.innerWidth()/number*x)
-          column.push(100/number*x)
-        }
+    if (containerGallery.innerWidth()> 915) {
+      let number = 3
+      for (let x = 0; x < number; x++) {
+        //column.push(containerGallery.innerWidth()/number*x)
+        column.push(100/number*x)
       }
-      var fullDetailImages=[]
-      var dem = 0
-      for (let x = 0; x < detailImages.length; x = x + column.length) {
-        var i = x
-        var vitrihang = x - column.length
-        console.log("lan: " + x)
-        //column.forEach(left => {
-        //  var obj = detailImages[i]
-        //  obj["left"] = left
-        //  i= i+1
-        //});
-        if ((detailImages.length - dem>=column.length)) {
-          for (let k = 0; k < column.length; k++) {
-            var obj = {}
-            obj = detailImages[i]
-            obj.left = column[k]
-            obj.widthContainer = (100/column.length)
-            obj.width = (100/column.length)/100*widthContainerAlbum 
-            obj.height = Number(obj.heightOrigin)/(Number(obj.widthOrigin)/obj.width)
-            var top =0
-            if(vitrihang >=0){
-              top = detailImages[i-column.length].top + detailImages[i-column.length].height
-              console.log(detailImages[i-column.length].top)
-            }
-            else{
-              top = 0
-            }
-            obj.top = top
-            //obj.top= column[k] * Number(obj.heightOrigin)
-            i = i+1
-            dem = dem +1
-            fullDetailImages.push(obj)
-          }
-        }else{
-          for (let k = 0; k < detailImages.length - dem; k++) {
-            var obj = {}
-            obj = detailImages[i]
-            obj.left = column[k]
-            obj.width = (100/column.length)/100*widthContainerAlbum 
-            obj.height = Number(obj.heightOrigin)/(Number(obj.widthOrigin)/obj.width)
-            obj.widthContainer = (100/column.length)
-            if(vitrihang >=0){
-              top = detailImages[i-column.length].top + detailImages[i-column.length].height
-            }
-            else{
-              top = 0
-            }
-            obj.top= top
-            //obj.top= column[k] * Number(obj.heightOrigin)
-            i = i+1
-            fullDetailImages.push(obj)
-          }
-        }
-      }
-      console.log(fullDetailImages)
-      var heightAlbum= 0
-      let viTri = 0
-        let maxtop = 0
-        for (let i = 0; i < fullDetailImages.length; i++) {
-          if (fullDetailImages[i].top > maxtop) {
-            viTri = i
-          }
-        }
-        heightAlbum = fullDetailImages[viTri].top + fullDetailImages[viTri].height +50;
       
-      
-      var elementcontainergallery = document.getElementById("container-gallery")
-      elementcontainergallery.style.height = heightAlbum +'px'
-      for (let i = 0; i < fullDetailImages.length; i++) {
-        let div = document.createElement("div")
-        div.style.position = "absolute"
-        div.style.width = fullDetailImages[i].widthContainer +'%'
-        div.style.left = fullDetailImages[i].left + '%'
-        div.style.top = fullDetailImages[i].top + 'px'
-        div.classList.add('grid-item')
-        div.style.padding ="5px"
-        elementcontainergallery.append(div)
-        let img =document.createElement("img")
-        img.src  = fullDetailImages[i].src
-        img.style.width = "100%"
-        div.appendChild(img)
-      }
     }
+
     
     window.addEventListener('resize',addAlbum() , true);
     window.addEventListener('resize',addHeart() , true);
+
     
     //for (let x = 0; x < arrayImages.length; x+3) {
     //  var temp =x
